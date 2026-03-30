@@ -1,0 +1,91 @@
+{
+  "info": {
+    "_postman_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "name": "productsapp-automation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Products",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "var jsonData = pm.response.json();",
+              "",
+              "// Test response status code",
+              "pm.test(\"response to be 200 OK\", () => {pm.response.to.have.status(200)});",
+              "",
+              "// Tests for Product 1 (Tomato Soup)",
+              "pm.test(\"value of [0].id to be 1\", () => {pm.expect(jsonData[0].id).to.equal(1)});",
+              "pm.test(\"value of [0].name to be Tomato Soup\", () => {pm.expect(jsonData[0].name).to.equal(\"Tomato Soup\")});",
+              "pm.test(\"value of [0].category to be Groceries\", () => {pm.expect(jsonData[0].category).to.equal(\"Groceries\")});",
+              "pm.test(\"value of [0].price to be 1\", () => {pm.expect(jsonData[0].price).to.equal(1)});",
+              "",
+              "// Tests for Product 2 (Yo-yo)",
+              "pm.test(\"value of [1].id to be 2\", () => {pm.expect(jsonData[1].id).to.equal(2)});",
+              "pm.test(\"value of [1].name to be Yo-yo\", () => {pm.expect(jsonData[1].name).to.equal(\"Yo-yo\")});",
+              "pm.test(\"value of [1].category to be Toys\", () => {pm.expect(jsonData[1].category).to.equal(\"Toys\")});",
+              "pm.test(\"value of [1].price to be 3.75\", () => {pm.expect(jsonData[1].price).to.equal(3.75)});",
+              "",
+              "// Tests for Product 3 (Hammer)",
+              "pm.test(\"value of [2].id to be 3\", () => {pm.expect(jsonData[2].id).to.equal(3)});",
+              "pm.test(\"value of [2].name to be Hammer\", () => {pm.expect(jsonData[2].name).to.equal(\"Hammer\")});",
+              "pm.test(\"value of [2].category to be Hardware\", () => {pm.expect(jsonData[2].category).to.equal(\"Hardware\")});",
+              "pm.test(\"value of [2].price to be 16.99\", () => {pm.expect(jsonData[2].price).to.equal(16.99)});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5025/api/products",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5025",
+          "path": ["api", "products"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Product By Id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "var jsonData = pm.response.json();",
+              "",
+              "// Test response status code",
+              "pm.test(\"response to be 200 OK\", () => {pm.response.to.have.status(200)});",
+              "",
+              "// Tests for Product 1 (Tomato Soup)",
+              "pm.test(\"value of id to be 1\", () => {pm.expect(jsonData.id).to.equal(1)});",
+              "pm.test(\"value of name to be Tomato Soup\", () => {pm.expect(jsonData.name).to.equal(\"Tomato Soup\")});",
+              "pm.test(\"value of category to be Groceries\", () => {pm.expect(jsonData.category).to.equal(\"Groceries\")});",
+              "pm.test(\"value of price to be 1\", () => {pm.expect(jsonData.price).to.equal(1)});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5025/api/products/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5025",
+          "path": ["api", "products", "1"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
