@@ -18,6 +18,11 @@ namespace ProductsApp.Controllers
         {
         }
 
+        public ProductsController(Product[] products)
+        {
+            this.products = products;
+        }
+
         [HttpGet]
         public IEnumerable<Product> GetAllProducts()
         {
