@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
 using ProductsApp.Models;
 
 namespace ProductsApp.Controllers
@@ -14,6 +15,7 @@ namespace ProductsApp.Controllers
             new Product { Id = 3, Name = "Hammer", Category = "Hardware", Price = 16.99M }
         };
 
+        [ActivatorUtilitiesConstructor]
         public ProductsController()
         {
         }
