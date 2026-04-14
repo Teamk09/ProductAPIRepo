@@ -27,7 +27,7 @@ namespace ProductsApp.Tests
             Assert.IsNotNull(result);
             var product = result.Value as Product;
             Assert.IsNotNull(product);
-            Assert.AreEqual("Tomato Soup", product.Name);
+            Assert.AreEqual("Potato Soup", product.Name);
         }
 
         [TestMethod]

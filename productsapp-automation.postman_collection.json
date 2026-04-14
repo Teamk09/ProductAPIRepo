@@ -17,11 +17,11 @@
               "// Test response status code",
               "pm.test(\"response to be 200 OK\", () => {pm.response.to.have.status(200)});",
               "",
-              "// Tests for Product 1 (Tomato Soup)",
+              "// Tests for Product 1 (Potato Soup)",
               "pm.test(\"value of [0].id to be 1\", () => {pm.expect(jsonData[0].id).to.equal(1)});",
-              "pm.test(\"value of [0].name to be Tomato Soup\", () => {pm.expect(jsonData[0].name).to.equal(\"Tomato Soup\")});",
-              "pm.test(\"value of [0].category to be Groceries\", () => {pm.expect(jsonData[0].category).to.equal(\"Groceries\")});",
-              "pm.test(\"value of [0].price to be 1\", () => {pm.expect(jsonData[0].price).to.equal(1)});",
+              "pm.test(\"value of [0].name to be Potato Soup\", () => {pm.expect(jsonData[0].name).to.equal(\"Potato Soup\")});",
+              "pm.test(\"value of [0].category to be Schmoceries\", () => {pm.expect(jsonData[0].category).to.equal(\"Schmoceries\")});",
+              "pm.test(\"value of [0].price to be 42\", () => {pm.expect(jsonData[0].price).to.equal(42)});",
               "",
               "// Tests for Product 2 (Yo-yo)",
               "pm.test(\"value of [1].id to be 2\", () => {pm.expect(jsonData[1].id).to.equal(2)});",
@@ -64,11 +64,11 @@
               "// Test response status code",
               "pm.test(\"response to be 200 OK\", () => {pm.response.to.have.status(200)});",
               "",
-              "// Tests for Product 1 (Tomato Soup)",
+              "// Tests for Product 1 (Potato Soup)",
               "pm.test(\"value of id to be 1\", () => {pm.expect(jsonData.id).to.equal(1)});",
-              "pm.test(\"value of name to be Tomato Soup\", () => {pm.expect(jsonData.name).to.equal(\"Tomato Soup\")});",
-              "pm.test(\"value of category to be Groceries\", () => {pm.expect(jsonData.category).to.equal(\"Groceries\")});",
-              "pm.test(\"value of price to be 1\", () => {pm.expect(jsonData.price).to.equal(1)});"
+              "pm.test(\"value of name to be Potato Soup\", () => {pm.expect(jsonData.name).to.equal(\"Potato Soup\")});",
+              "pm.test(\"value of category to be Schmoceries\", () => {pm.expect(jsonData.category).to.equal(\"Schmoceries\")});",
+              "pm.test(\"value of price to be 42\", () => {pm.expect(jsonData.price).to.equal(42)});"
             ],
             "type": "text/javascript"
           }
